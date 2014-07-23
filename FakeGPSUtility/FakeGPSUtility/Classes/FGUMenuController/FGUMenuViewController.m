@@ -11,7 +11,6 @@
 //
 
 #import "FGUMenuViewController.h"
-#import "FGUAppDelegate.h"
 #import "FGUContainerViewController.h"
 
 #if defined(USE_TEST_UTILITIES) && USE_TEST_UTILITIES
