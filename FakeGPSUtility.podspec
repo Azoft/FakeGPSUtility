@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FakeGPSUtility"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "Utility for debugging locations"
 
   s.description  = <<-DESC
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/FakeGPSUtility.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/Azoft/FakeGPSUtility", :tag => "1.0.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
