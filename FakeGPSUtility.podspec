@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Azoft/FakeGPSUtility", :tag => "1.0.0" }
   s.source_files  = 'FakeGPSUtility/FakeGPSUtility/**/*.{h,m}'
   s.resources = 'FakeGPSUtility/FakeGPSUtility/**/*.{xib}'
+  s.prefix_header_contents = '#import "FGUConstants.h"'
   s.frameworks = 'MapKit', 'CoreLocation'
   s.requires_arc = true
-
 end
