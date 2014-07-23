@@ -1,0 +1,709 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		049A4CD61920C20700D89AE0 /* Points.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049A4CD51920C20700D89AE0 /* Points.plist */; };
+		049F5FC118E529D5007C7C77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049F5FC018E529D5007C7C77 /* Foundation.framework */; };
+		049F5FC318E529D5007C7C77 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049F5FC218E529D5007C7C77 /* CoreGraphics.framework */; };
+		049F5FC518E529D5007C7C77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049F5FC418E529D5007C7C77 /* UIKit.framework */; };
+		049F5FCB18E529D5007C7C77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 049F5FC918E529D5007C7C77 /* InfoPlist.strings */; };
+		049F5FCD18E529D5007C7C77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F5FCC18E529D5007C7C77 /* main.m */; };
+		049F5FDC18E529D5007C7C77 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049F5FDB18E529D5007C7C77 /* Images.xcassets */; };
+		049F5FE318E529D5007C7C77 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049F5FE218E529D5007C7C77 /* XCTest.framework */; };
+		049F5FE418E529D5007C7C77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049F5FC018E529D5007C7C77 /* Foundation.framework */; };
+		049F5FE518E529D5007C7C77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049F5FC418E529D5007C7C77 /* UIKit.framework */; };
+		049F5FED18E529D5007C7C77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 049F5FEB18E529D5007C7C77 /* InfoPlist.strings */; };
+		049F5FEF18E529D5007C7C77 /* FakeGPSUtilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F5FEE18E529D5007C7C77 /* FakeGPSUtilityTests.m */; };
+		049F60B018E52A5E007C7C77 /* FGUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F604F18E52A5E007C7C77 /* FGUAppDelegate.m */; };
+		049F60B118E52A5E007C7C77 /* FGUTestMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F605218E52A5E007C7C77 /* FGUTestMainViewController.m */; };
+		049F60B218E52A5E007C7C77 /* FGUTestMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049F605318E52A5E007C7C77 /* FGUTestMainViewController.xib */; };
+		049F60C318E53821007C7C77 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049F60C218E53821007C7C77 /* CoreLocation.framework */; };
+		049F60C518E5382B007C7C77 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049F60C418E5382B007C7C77 /* MapKit.framework */; };
+		04A5511818EAA69D0079B623 /* CLLocationManager+FakeGPSUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A550C818EAA69D0079B623 /* CLLocationManager+FakeGPSUtility.m */; };
+		04A5511918EAA69D0079B623 /* UIWindow+FakeGPSUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A550CA18EAA69D0079B623 /* UIWindow+FakeGPSUtility.m */; };
+		04A5511A18EAA69D0079B623 /* FGUBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A550CE18EAA69D0079B623 /* FGUBaseViewController.m */; };
+		04A5511B18EAA69D0079B623 /* FGUFakeLocationPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A550D118EAA69D0079B623 /* FGUFakeLocationPool.m */; };
+		04A5511C18EAA69D0079B623 /* FGUPathPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A550D318EAA69D0079B623 /* FGUPathPoint.m */; };
+		04A5511D18EAA69D0079B623 /* FGULocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A550D618EAA69D0079B623 /* FGULocationManager.m */; };
+		04A5511E18EAA69D0079B623 /* FGULocationManagerInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A550D818EAA69D0079B623 /* FGULocationManagerInternal.m */; };
+		04A5511F18EAA69D0079B623 /* FGURealLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A550DA18EAA69D0079B623 /* FGURealLocationManager.m */; };
+		04A5512018EAA69D0079B623 /* FGUContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A550DD18EAA69D0079B623 /* FGUContainerViewController.m */; };
+		04A5512118EAA69D0079B623 /* FGUContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A550DE18EAA69D0079B623 /* FGUContainerViewController.xib */; };
+		04A5512418EAA69D0079B623 /* FGUMapItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A550E318EAA69D0079B623 /* FGUMapItemCell.m */; };
+		04A5512518EAA69D0079B623 /* FGUMapItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A550E418EAA69D0079B623 /* FGUMapItemCell.xib */; };
+		04A5512618EAA69D0079B623 /* FGUMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A550E618EAA69D0079B623 /* FGUMapViewController.m */; };
+		04A5512718EAA69D0079B623 /* FGUMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A550E718EAA69D0079B623 /* FGUMapViewController.xib */; };
+		04A5512918EAA69D0079B623 /* FGUPathTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A550EB18EAA69D0079B623 /* FGUPathTableViewController.m */; };
+		04A5512A18EAA69D0079B623 /* FGUPathTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A550EC18EAA69D0079B623 /* FGUPathTableViewController.xib */; };
+		04A5512B18EAA69D0079B623 /* FGUSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A550EE18EAA69D0079B623 /* FGUSettingsViewController.m */; };
+		04A5512C18EAA69D0079B623 /* FGUSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A550EF18EAA69D0079B623 /* FGUSettingsViewController.xib */; };
+		04A5512D18EAA69D0079B623 /* FGUMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A550F218EAA69D0079B623 /* FGUMenuViewController.m */; };
+		04A5512E18EAA69D0079B623 /* FGUMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A550F318EAA69D0079B623 /* FGUMenuViewController.xib */; };
+		04A5512F18EAA69D0079B623 /* FGUMenuWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A550F618EAA69D0079B623 /* FGUMenuWindow.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		049F5FE618E529D5007C7C77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 049F5FB518E529D5007C7C77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 049F5FBC18E529D5007C7C77;
+			remoteInfo = FakeGPSUtility;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		049A4CD51920C20700D89AE0 /* Points.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Points.plist; sourceTree = "<group>"; };
+		049F5FBD18E529D5007C7C77 /* FakeGPSUtility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeGPSUtility.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		049F5FC018E529D5007C7C77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		049F5FC218E529D5007C7C77 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		049F5FC418E529D5007C7C77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		049F5FC818E529D5007C7C77 /* FakeGPSUtility-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FakeGPSUtility-Info.plist"; sourceTree = "<group>"; };
+		049F5FCA18E529D5007C7C77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		049F5FCC18E529D5007C7C77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		049F5FCE18E529D5007C7C77 /* FakeGPSUtility-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FakeGPSUtility-Prefix.pch"; sourceTree = "<group>"; };
+		049F5FDB18E529D5007C7C77 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		049F5FE118E529D5007C7C77 /* FakeGPSUtilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FakeGPSUtilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		049F5FE218E529D5007C7C77 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		049F5FEA18E529D5007C7C77 /* FakeGPSUtilityTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FakeGPSUtilityTests-Info.plist"; sourceTree = "<group>"; };
+		049F5FEC18E529D5007C7C77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		049F5FEE18E529D5007C7C77 /* FakeGPSUtilityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FakeGPSUtilityTests.m; sourceTree = "<group>"; };
+		049F604E18E52A5E007C7C77 /* FGUAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGUAppDelegate.h; sourceTree = "<group>"; };
+		049F604F18E52A5E007C7C77 /* FGUAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGUAppDelegate.m; sourceTree = "<group>"; };
+		049F605118E52A5E007C7C77 /* FGUTestMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGUTestMainViewController.h; sourceTree = "<group>"; };
+		049F605218E52A5E007C7C77 /* FGUTestMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGUTestMainViewController.m; sourceTree = "<group>"; };
+		049F605318E52A5E007C7C77 /* FGUTestMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGUTestMainViewController.xib; sourceTree = "<group>"; };
+		049F60C218E53821007C7C77 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		049F60C418E5382B007C7C77 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		04A550C718EAA69D0079B623 /* CLLocationManager+FakeGPSUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocationManager+FakeGPSUtility.h"; sourceTree = "<group>"; };
+		04A550C818EAA69D0079B623 /* CLLocationManager+FakeGPSUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocationManager+FakeGPSUtility.m"; sourceTree = "<group>"; };
+		04A550C918EAA69D0079B623 /* UIWindow+FakeGPSUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+FakeGPSUtility.h"; sourceTree = "<group>"; };
+		04A550CA18EAA69D0079B623 /* UIWindow+FakeGPSUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+FakeGPSUtility.m"; sourceTree = "<group>"; };
+		04A550CD18EAA69D0079B623 /* FGUBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGUBaseViewController.h; sourceTree = "<group>"; };
+		04A550CE18EAA69D0079B623 /* FGUBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGUBaseViewController.m; sourceTree = "<group>"; };
+		04A550D018EAA69D0079B623 /* FGUFakeLocationPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGUFakeLocationPool.h; sourceTree = "<group>"; };
+		04A550D118EAA69D0079B623 /* FGUFakeLocationPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FGUFakeLocationPool.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		04A550D218EAA69D0079B623 /* FGUPathPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGUPathPoint.h; sourceTree = "<group>"; };
+		04A550D318EAA69D0079B623 /* FGUPathPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGUPathPoint.m; sourceTree = "<group>"; };
+		04A550D518EAA69D0079B623 /* FGULocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGULocationManager.h; sourceTree = "<group>"; };
+		04A550D618EAA69D0079B623 /* FGULocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGULocationManager.m; sourceTree = "<group>"; };
+		04A550D718EAA69D0079B623 /* FGULocationManagerInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGULocationManagerInternal.h; sourceTree = "<group>"; };
+		04A550D818EAA69D0079B623 /* FGULocationManagerInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGULocationManagerInternal.m; sourceTree = "<group>"; };
+		04A550D918EAA69D0079B623 /* FGURealLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGURealLocationManager.h; sourceTree = "<group>"; };
+		04A550DA18EAA69D0079B623 /* FGURealLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGURealLocationManager.m; sourceTree = "<group>"; };
+		04A550DC18EAA69D0079B623 /* FGUContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGUContainerViewController.h; sourceTree = "<group>"; };
+		04A550DD18EAA69D0079B623 /* FGUContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGUContainerViewController.m; sourceTree = "<group>"; };
+		04A550DE18EAA69D0079B623 /* FGUContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGUContainerViewController.xib; sourceTree = "<group>"; };
+		04A550E218EAA69D0079B623 /* FGUMapItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGUMapItemCell.h; sourceTree = "<group>"; };
+		04A550E318EAA69D0079B623 /* FGUMapItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGUMapItemCell.m; sourceTree = "<group>"; };
+		04A550E418EAA69D0079B623 /* FGUMapItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGUMapItemCell.xib; sourceTree = "<group>"; };
+		04A550E518EAA69D0079B623 /* FGUMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGUMapViewController.h; sourceTree = "<group>"; };
+		04A550E618EAA69D0079B623 /* FGUMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGUMapViewController.m; sourceTree = "<group>"; };
+		04A550E718EAA69D0079B623 /* FGUMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGUMapViewController.xib; sourceTree = "<group>"; };
+		04A550EA18EAA69D0079B623 /* FGUPathTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGUPathTableViewController.h; sourceTree = "<group>"; };
+		04A550EB18EAA69D0079B623 /* FGUPathTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGUPathTableViewController.m; sourceTree = "<group>"; };
+		04A550EC18EAA69D0079B623 /* FGUPathTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGUPathTableViewController.xib; sourceTree = "<group>"; };
+		04A550ED18EAA69D0079B623 /* FGUSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGUSettingsViewController.h; sourceTree = "<group>"; };
+		04A550EE18EAA69D0079B623 /* FGUSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGUSettingsViewController.m; sourceTree = "<group>"; };
+		04A550EF18EAA69D0079B623 /* FGUSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGUSettingsViewController.xib; sourceTree = "<group>"; };
+		04A550F118EAA69D0079B623 /* FGUMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGUMenuViewController.h; sourceTree = "<group>"; };
+		04A550F218EAA69D0079B623 /* FGUMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGUMenuViewController.m; sourceTree = "<group>"; };
+		04A550F318EAA69D0079B623 /* FGUMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGUMenuViewController.xib; sourceTree = "<group>"; };
+		04A550F518EAA69D0079B623 /* FGUMenuWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGUMenuWindow.h; sourceTree = "<group>"; };
+		04A550F618EAA69D0079B623 /* FGUMenuWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGUMenuWindow.m; sourceTree = "<group>"; };
+		04A550F718EAA69D0079B623 /* FGUConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FGUConstants.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		04F8870F19373B3A007E5CE0 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		049F5FBA18E529D5007C7C77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049F60C518E5382B007C7C77 /* MapKit.framework in Frameworks */,
+				049F60C318E53821007C7C77 /* CoreLocation.framework in Frameworks */,
+				049F5FC318E529D5007C7C77 /* CoreGraphics.framework in Frameworks */,
+				049F5FC518E529D5007C7C77 /* UIKit.framework in Frameworks */,
+				049F5FC118E529D5007C7C77 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		049F5FDE18E529D5007C7C77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049F5FE318E529D5007C7C77 /* XCTest.framework in Frameworks */,
+				049F5FE518E529D5007C7C77 /* UIKit.framework in Frameworks */,
+				049F5FE418E529D5007C7C77 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		049F5FB418E529D5007C7C77 = {
+			isa = PBXGroup;
+			children = (
+				049F5FC618E529D5007C7C77 /* FakeGPSUtility */,
+				049F5FE818E529D5007C7C77 /* FakeGPSUtilityTests */,
+				049F5FBF18E529D5007C7C77 /* Frameworks */,
+				049F5FBE18E529D5007C7C77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		049F5FBE18E529D5007C7C77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				049F5FBD18E529D5007C7C77 /* FakeGPSUtility.app */,
+				049F5FE118E529D5007C7C77 /* FakeGPSUtilityTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		049F5FBF18E529D5007C7C77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				049F60C418E5382B007C7C77 /* MapKit.framework */,
+				049F60C218E53821007C7C77 /* CoreLocation.framework */,
+				049F5FC018E529D5007C7C77 /* Foundation.framework */,
+				049F5FC218E529D5007C7C77 /* CoreGraphics.framework */,
+				049F5FC418E529D5007C7C77 /* UIKit.framework */,
+				049F5FE218E529D5007C7C77 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		049F5FC618E529D5007C7C77 /* FakeGPSUtility */ = {
+			isa = PBXGroup;
+			children = (
+				04A550C518EAA69D0079B623 /* FakeGPSUtility */,
+				049F604C18E52A5E007C7C77 /* Classes */,
+				049F5FDB18E529D5007C7C77 /* Images.xcassets */,
+				049F5FC718E529D5007C7C77 /* Supporting Files */,
+			);
+			path = FakeGPSUtility;
+			sourceTree = "<group>";
+		};
+		049F5FC718E529D5007C7C77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				049F5FC818E529D5007C7C77 /* FakeGPSUtility-Info.plist */,
+				049F5FC918E529D5007C7C77 /* InfoPlist.strings */,
+				049F5FCC18E529D5007C7C77 /* main.m */,
+				049F5FCE18E529D5007C7C77 /* FakeGPSUtility-Prefix.pch */,
+				049A4CD51920C20700D89AE0 /* Points.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		049F5FE818E529D5007C7C77 /* FakeGPSUtilityTests */ = {
+			isa = PBXGroup;
+			children = (
+				049F5FEE18E529D5007C7C77 /* FakeGPSUtilityTests.m */,
+				049F5FE918E529D5007C7C77 /* Supporting Files */,
+			);
+			path = FakeGPSUtilityTests;
+			sourceTree = "<group>";
+		};
+		049F5FE918E529D5007C7C77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				049F5FEA18E529D5007C7C77 /* FakeGPSUtilityTests-Info.plist */,
+				049F5FEB18E529D5007C7C77 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		049F604C18E52A5E007C7C77 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				049F604D18E52A5E007C7C77 /* AppDelegate */,
+				049F605018E52A5E007C7C77 /* TestAppViewController */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		049F604D18E52A5E007C7C77 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				049F604E18E52A5E007C7C77 /* FGUAppDelegate.h */,
+				049F604F18E52A5E007C7C77 /* FGUAppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		049F605018E52A5E007C7C77 /* TestAppViewController */ = {
+			isa = PBXGroup;
+			children = (
+				049F605118E52A5E007C7C77 /* FGUTestMainViewController.h */,
+				049F605218E52A5E007C7C77 /* FGUTestMainViewController.m */,
+				049F605318E52A5E007C7C77 /* FGUTestMainViewController.xib */,
+			);
+			path = TestAppViewController;
+			sourceTree = "<group>";
+		};
+		04A550C518EAA69D0079B623 /* FakeGPSUtility */ = {
+			isa = PBXGroup;
+			children = (
+				04A550C618EAA69D0079B623 /* Categories */,
+				04A550CB18EAA69D0079B623 /* Classes */,
+				04A550F718EAA69D0079B623 /* FGUConstants.h */,
+				04F8870F19373B3A007E5CE0 /* SynthesizeSingleton.h */,
+			);
+			path = FakeGPSUtility;
+			sourceTree = "<group>";
+		};
+		04A550C618EAA69D0079B623 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				04A550C718EAA69D0079B623 /* CLLocationManager+FakeGPSUtility.h */,
+				04A550C818EAA69D0079B623 /* CLLocationManager+FakeGPSUtility.m */,
+				04A550C918EAA69D0079B623 /* UIWindow+FakeGPSUtility.h */,
+				04A550CA18EAA69D0079B623 /* UIWindow+FakeGPSUtility.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		04A550CB18EAA69D0079B623 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				04A550CC18EAA69D0079B623 /* FGUBaseController */,
+				04A550CF18EAA69D0079B623 /* FGUFakeLocationPool */,
+				04A550D418EAA69D0079B623 /* FGULocationManager */,
+				04A550DB18EAA69D0079B623 /* FGUMapViewController */,
+				04A550F018EAA69D0079B623 /* FGUMenuController */,
+				04A550F418EAA69D0079B623 /* FGUMenuWindow */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		04A550CC18EAA69D0079B623 /* FGUBaseController */ = {
+			isa = PBXGroup;
+			children = (
+				04A550CD18EAA69D0079B623 /* FGUBaseViewController.h */,
+				04A550CE18EAA69D0079B623 /* FGUBaseViewController.m */,
+			);
+			path = FGUBaseController;
+			sourceTree = "<group>";
+		};
+		04A550CF18EAA69D0079B623 /* FGUFakeLocationPool */ = {
+			isa = PBXGroup;
+			children = (
+				04A550D018EAA69D0079B623 /* FGUFakeLocationPool.h */,
+				04A550D118EAA69D0079B623 /* FGUFakeLocationPool.m */,
+				04A550D218EAA69D0079B623 /* FGUPathPoint.h */,
+				04A550D318EAA69D0079B623 /* FGUPathPoint.m */,
+			);
+			path = FGUFakeLocationPool;
+			sourceTree = "<group>";
+		};
+		04A550D418EAA69D0079B623 /* FGULocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				04A550D518EAA69D0079B623 /* FGULocationManager.h */,
+				04A550D618EAA69D0079B623 /* FGULocationManager.m */,
+				04A550D718EAA69D0079B623 /* FGULocationManagerInternal.h */,
+				04A550D818EAA69D0079B623 /* FGULocationManagerInternal.m */,
+				04A550D918EAA69D0079B623 /* FGURealLocationManager.h */,
+				04A550DA18EAA69D0079B623 /* FGURealLocationManager.m */,
+			);
+			path = FGULocationManager;
+			sourceTree = "<group>";
+		};
+		04A550DB18EAA69D0079B623 /* FGUMapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04A550DC18EAA69D0079B623 /* FGUContainerViewController.h */,
+				04A550DD18EAA69D0079B623 /* FGUContainerViewController.m */,
+				04A550DE18EAA69D0079B623 /* FGUContainerViewController.xib */,
+				04A550E218EAA69D0079B623 /* FGUMapItemCell.h */,
+				04A550E318EAA69D0079B623 /* FGUMapItemCell.m */,
+				04A550E418EAA69D0079B623 /* FGUMapItemCell.xib */,
+				04A550E518EAA69D0079B623 /* FGUMapViewController.h */,
+				04A550E618EAA69D0079B623 /* FGUMapViewController.m */,
+				04A550E718EAA69D0079B623 /* FGUMapViewController.xib */,
+				04A550EA18EAA69D0079B623 /* FGUPathTableViewController.h */,
+				04A550EB18EAA69D0079B623 /* FGUPathTableViewController.m */,
+				04A550EC18EAA69D0079B623 /* FGUPathTableViewController.xib */,
+				04A550ED18EAA69D0079B623 /* FGUSettingsViewController.h */,
+				04A550EE18EAA69D0079B623 /* FGUSettingsViewController.m */,
+				04A550EF18EAA69D0079B623 /* FGUSettingsViewController.xib */,
+			);
+			path = FGUMapViewController;
+			sourceTree = "<group>";
+		};
+		04A550F018EAA69D0079B623 /* FGUMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				04A550F118EAA69D0079B623 /* FGUMenuViewController.h */,
+				04A550F218EAA69D0079B623 /* FGUMenuViewController.m */,
+				04A550F318EAA69D0079B623 /* FGUMenuViewController.xib */,
+			);
+			path = FGUMenuController;
+			sourceTree = "<group>";
+		};
+		04A550F418EAA69D0079B623 /* FGUMenuWindow */ = {
+			isa = PBXGroup;
+			children = (
+				04A550F518EAA69D0079B623 /* FGUMenuWindow.h */,
+				04A550F618EAA69D0079B623 /* FGUMenuWindow.m */,
+			);
+			path = FGUMenuWindow;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		049F5FBC18E529D5007C7C77 /* FakeGPSUtility */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 049F5FF218E529D5007C7C77 /* Build configuration list for PBXNativeTarget "FakeGPSUtility" */;
+			buildPhases = (
+				049F5FB918E529D5007C7C77 /* Sources */,
+				049F5FBA18E529D5007C7C77 /* Frameworks */,
+				049F5FBB18E529D5007C7C77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FakeGPSUtility;
+			productName = FakeGPSUtility;
+			productReference = 049F5FBD18E529D5007C7C77 /* FakeGPSUtility.app */;
+			productType = "com.apple.product-type.application";
+		};
+		049F5FE018E529D5007C7C77 /* FakeGPSUtilityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 049F5FF518E529D5007C7C77 /* Build configuration list for PBXNativeTarget "FakeGPSUtilityTests" */;
+			buildPhases = (
+				049F5FDD18E529D5007C7C77 /* Sources */,
+				049F5FDE18E529D5007C7C77 /* Frameworks */,
+				049F5FDF18E529D5007C7C77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				049F5FE718E529D5007C7C77 /* PBXTargetDependency */,
+			);
+			name = FakeGPSUtilityTests;
+			productName = FakeGPSUtilityTests;
+			productReference = 049F5FE118E529D5007C7C77 /* FakeGPSUtilityTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		049F5FB518E529D5007C7C77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FGU;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Azoft;
+				TargetAttributes = {
+					049F5FE018E529D5007C7C77 = {
+						TestTargetID = 049F5FBC18E529D5007C7C77;
+					};
+				};
+			};
+			buildConfigurationList = 049F5FB818E529D5007C7C77 /* Build configuration list for PBXProject "FakeGPSUtility" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 049F5FB418E529D5007C7C77;
+			productRefGroup = 049F5FBE18E529D5007C7C77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				049F5FBC18E529D5007C7C77 /* FakeGPSUtility */,
+				049F5FE018E529D5007C7C77 /* FakeGPSUtilityTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		049F5FBB18E529D5007C7C77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049F60B218E52A5E007C7C77 /* FGUTestMainViewController.xib in Resources */,
+				04A5512C18EAA69D0079B623 /* FGUSettingsViewController.xib in Resources */,
+				049A4CD61920C20700D89AE0 /* Points.plist in Resources */,
+				04A5512518EAA69D0079B623 /* FGUMapItemCell.xib in Resources */,
+				049F5FDC18E529D5007C7C77 /* Images.xcassets in Resources */,
+				049F5FCB18E529D5007C7C77 /* InfoPlist.strings in Resources */,
+				04A5512A18EAA69D0079B623 /* FGUPathTableViewController.xib in Resources */,
+				04A5512718EAA69D0079B623 /* FGUMapViewController.xib in Resources */,
+				04A5512E18EAA69D0079B623 /* FGUMenuViewController.xib in Resources */,
+				04A5512118EAA69D0079B623 /* FGUContainerViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		049F5FDF18E529D5007C7C77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049F5FED18E529D5007C7C77 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		049F5FB918E529D5007C7C77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049F5FCD18E529D5007C7C77 /* main.m in Sources */,
+				04A5512D18EAA69D0079B623 /* FGUMenuViewController.m in Sources */,
+				04A5511A18EAA69D0079B623 /* FGUBaseViewController.m in Sources */,
+				049F60B118E52A5E007C7C77 /* FGUTestMainViewController.m in Sources */,
+				04A5511818EAA69D0079B623 /* CLLocationManager+FakeGPSUtility.m in Sources */,
+				04A5512B18EAA69D0079B623 /* FGUSettingsViewController.m in Sources */,
+				04A5511B18EAA69D0079B623 /* FGUFakeLocationPool.m in Sources */,
+				04A5511918EAA69D0079B623 /* UIWindow+FakeGPSUtility.m in Sources */,
+				04A5512018EAA69D0079B623 /* FGUContainerViewController.m in Sources */,
+				04A5512618EAA69D0079B623 /* FGUMapViewController.m in Sources */,
+				04A5511D18EAA69D0079B623 /* FGULocationManager.m in Sources */,
+				04A5512F18EAA69D0079B623 /* FGUMenuWindow.m in Sources */,
+				04A5511F18EAA69D0079B623 /* FGURealLocationManager.m in Sources */,
+				04A5512418EAA69D0079B623 /* FGUMapItemCell.m in Sources */,
+				04A5511C18EAA69D0079B623 /* FGUPathPoint.m in Sources */,
+				04A5511E18EAA69D0079B623 /* FGULocationManagerInternal.m in Sources */,
+				049F60B018E52A5E007C7C77 /* FGUAppDelegate.m in Sources */,
+				04A5512918EAA69D0079B623 /* FGUPathTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		049F5FDD18E529D5007C7C77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049F5FEF18E529D5007C7C77 /* FakeGPSUtilityTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		049F5FE718E529D5007C7C77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 049F5FBC18E529D5007C7C77 /* FakeGPSUtility */;
+			targetProxy = 049F5FE618E529D5007C7C77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		049F5FC918E529D5007C7C77 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				049F5FCA18E529D5007C7C77 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		049F5FEB18E529D5007C7C77 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				049F5FEC18E529D5007C7C77 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		049F5FF018E529D5007C7C77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s x86_64 i386 arm64";
+			};
+			name = Debug;
+		};
+		049F5FF118E529D5007C7C77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PROVISIONING_PROFILE = "B029284F-FA40-4F24-AAB0-E24E584A21B8";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s x86_64 i386 arm64";
+			};
+			name = Release;
+		};
+		049F5FF318E529D5007C7C77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FakeGPSUtility/FakeGPSUtility-Prefix.pch";
+				INFOPLIST_FILE = "FakeGPSUtility/FakeGPSUtility-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9F633DBF-B052-4709-BD96-A64DEF132F1E";
+				VALID_ARCHS = "armv7 armv7s x86_64 i386 arm64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		049F5FF418E529D5007C7C77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FakeGPSUtility/FakeGPSUtility-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				INFOPLIST_FILE = "FakeGPSUtility/FakeGPSUtility-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B029284F-FA40-4F24-AAB0-E24E584A21B8";
+				VALID_ARCHS = "armv7 armv7s x86_64 i386 arm64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		049F5FF618E529D5007C7C77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FakeGPSUtility.app/FakeGPSUtility";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FakeGPSUtility/FakeGPSUtility-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FakeGPSUtilityTests/FakeGPSUtilityTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		049F5FF718E529D5007C7C77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FakeGPSUtility.app/FakeGPSUtility";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FakeGPSUtility/FakeGPSUtility-Prefix.pch";
+				INFOPLIST_FILE = "FakeGPSUtilityTests/FakeGPSUtilityTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		049F5FB818E529D5007C7C77 /* Build configuration list for PBXProject "FakeGPSUtility" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				049F5FF018E529D5007C7C77 /* Debug */,
+				049F5FF118E529D5007C7C77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		049F5FF218E529D5007C7C77 /* Build configuration list for PBXNativeTarget "FakeGPSUtility" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				049F5FF318E529D5007C7C77 /* Debug */,
+				049F5FF418E529D5007C7C77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		049F5FF518E529D5007C7C77 /* Build configuration list for PBXNativeTarget "FakeGPSUtilityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				049F5FF618E529D5007C7C77 /* Debug */,
+				049F5FF718E529D5007C7C77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 049F5FB518E529D5007C7C77 /* Project object */;
+}
