@@ -215,6 +215,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(FGUFakeLocationPool);
 - (void)moveToNextLocation {
     dispatch_async(self.internalQueue, ^{
         if ([self.pathPoints count] == 0) {
+            [self stopLocationSimulation];
             return;
         }
         
