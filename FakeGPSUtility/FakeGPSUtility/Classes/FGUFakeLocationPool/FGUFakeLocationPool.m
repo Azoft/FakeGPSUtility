@@ -222,11 +222,18 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(FGUFakeLocationPool);
             self.currentSegmentIndex = 0;
         }
         
+        if (self.paused == YES) {
+          return;
+        }
+
         FGUPathPoint *endPoint = self.pathPoints[self.currentSegmentIndex];
         [self setSimulatedLocationToLocation:endPoint fromLocation:self.lastPathPoint];
         
         if (endPoint.timeInterval > 0.) {
-            [self performSelector:_cmd withObject:nil afterDelay:endPoint.timeInterval];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(endPoint.timeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+              [self moveToNextLocation];
+            });
+
         }
         
         self.lastPathPoint = endPoint;
