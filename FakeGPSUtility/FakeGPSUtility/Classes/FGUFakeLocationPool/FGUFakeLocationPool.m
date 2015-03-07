@@ -74,7 +74,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(FGUFakeLocationPool);
             _paused = YES;
             _simulating = NO;
             _currentSimulationMode = FGULocationManagerSimModeSinglePointFromTouch;
-            _timescale = 100000000.0f;
+            _timescale = 1.0f;
             _pathPoints = [[NSMutableArray alloc] initWithCapacity:50];
             [self _saveCurrentState];
         }
