@@ -52,14 +52,6 @@ NSString *const TULoopSettingsKey = @"TULoopSettingsKey";
 
 @end
 
-void safe_dispatch_sync(dispatch_queue_t queue, dispatch_block_t block) {
-    if (queue == dispatch_get_current_queue()) {
-        block();
-    } else {
-        dispatch_sync(queue, block);
-    }
-}
-
 @implementation FGUFakeLocationPool
 
 SYNTHESIZE_SINGLETON_FOR_CLASS(FGUFakeLocationPool);
@@ -124,7 +116,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(FGUFakeLocationPool);
 #pragma mark - custom setters
 
 - (void)setCurrentSimulationMode:(FGULocationManagerSimMode)currentSimulationMode {
-    safe_dispatch_sync(self.internalQueue, ^{
+    dispatch_async(self.internalQueue, ^{
         if (self.currentSimulationMode == currentSimulationMode) {
             return;
         }
@@ -152,7 +144,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(FGUFakeLocationPool);
 }
 
 - (void)setTimescale:(NSTimeInterval)timescale {
-    safe_dispatch_sync(self.internalQueue, ^{
+    dispatch_async(self.internalQueue, ^{
         _timescale = timescale;
         [self.pathPoints enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             ((FGUPathPoint *)obj).timeInterval = 1. / timescale;
@@ -187,7 +179,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(FGUFakeLocationPool);
 }
 
 - (void)addLocationToPath:(CLLocation *)location {
-    safe_dispatch_sync(self.internalQueue, ^{
+    dispatch_async(self.internalQueue, ^{
         FGUPathPoint *newPoint = [[FGUPathPoint alloc] initWithLocation:location];
         
         if (self.currentSimulationMode == FGULocationManagerSimModeSinglePointFromTouch) {
@@ -219,7 +211,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(FGUFakeLocationPool);
 }
 
 - (void)moveToNextLocation {
-    safe_dispatch_sync(self.internalQueue, ^{
+    dispatch_async(self.internalQueue, ^{
         if ([self.pathPoints count] == 0) {
             return;
         }
