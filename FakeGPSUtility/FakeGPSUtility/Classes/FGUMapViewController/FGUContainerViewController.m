@@ -80,7 +80,10 @@ typedef enum {
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"paused"] || [keyPath isEqualToString:@"simulating"]) {
+      SAFE_MAIN_THREAD_EXECUTION({
         [self refreshPlayButton];
+      });
+
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }

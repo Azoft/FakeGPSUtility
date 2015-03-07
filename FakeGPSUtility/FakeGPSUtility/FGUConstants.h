@@ -82,5 +82,16 @@
     #define LOG_ERROR(__ERROR_MESSAGE_FORMAT__...)
 #endif
 
+/**
+ * Multithread support
+ */
+#define SAFE_MAIN_THREAD_EXECUTION(__CODE__) \
+    if ([NSThread isMainThread]) { \
+        {__CODE__}; \
+    } else { \
+        dispatch_sync(dispatch_get_main_queue(), ^{ \
+           {__CODE__}; \
+        }); \
+    }
 
 #endif
