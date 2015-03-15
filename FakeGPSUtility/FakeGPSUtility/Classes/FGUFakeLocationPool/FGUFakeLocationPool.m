@@ -21,6 +21,8 @@
 
 #if defined(USE_TEST_UTILITIES) && USE_TEST_UTILITIES
 
+const int32_t TUNoSelectedSegmentIndex = -1;
+
 NSString *const TULocationKey                   = @"TULocationKey";
 NSString *const TUOldLocationKey                = @"TUOldLocationKey";
 NSString *const TULocationPoolDidUpdateLocation = @"TULocationPoolDidUpdateLocation";
@@ -46,19 +48,11 @@ NSString *const TULoopSettingsKey = @"TULoopSettingsKey";
 @property (nonatomic, getter = isSimulating) BOOL simulating;
 @property (nonatomic, getter = isPathUpdateInProgress) BOOL pathUpdateInProgress;
 @property (nonatomic, readonly) NSMutableArray *pathPoints;
-@property (nonatomic) NSUInteger currentSegmentIndex;
+@property (nonatomic) int32_t currentSegmentIndex;
 @property (nonatomic) dispatch_queue_t internalQueue;
 @property (nonatomic, weak) FGUPathPoint *lastPathPoint;
 
 @end
-
-void safe_dispatch_sync(dispatch_queue_t queue, dispatch_block_t block) {
-    if (queue == dispatch_get_current_queue()) {
-        block();
-    } else {
-        dispatch_sync(queue, block);
-    }
-}
 
 @implementation FGUFakeLocationPool
 
@@ -76,11 +70,11 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(FGUFakeLocationPool);
         self = [super init];
         
         if (self) {
-            _currentSegmentIndex = NSNotFound;
+            _currentSegmentIndex = TUNoSelectedSegmentIndex;
             _paused = YES;
             _simulating = NO;
             _currentSimulationMode = FGULocationManagerSimModeSinglePointFromTouch;
-            _timescale = 100000000.0f;
+            _timescale = 1.0f;
             _pathPoints = [[NSMutableArray alloc] initWithCapacity:50];
             [self _saveCurrentState];
         }
@@ -124,7 +118,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(FGUFakeLocationPool);
 #pragma mark - custom setters
 
 - (void)setCurrentSimulationMode:(FGULocationManagerSimMode)currentSimulationMode {
-    safe_dispatch_sync(self.internalQueue, ^{
+    dispatch_async(self.internalQueue, ^{
         if (self.currentSimulationMode == currentSimulationMode) {
             return;
         }
@@ -145,14 +139,14 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(FGUFakeLocationPool);
         } else {
             [self.pathPoints removeAllObjects];
         }
-        self.currentSegmentIndex = NSNotFound;
+        self.currentSegmentIndex = TUNoSelectedSegmentIndex;
     });
     
     [self postNotificationWithName:TULocationPoolDidUpdatePathPointsNotification];
 }
 
 - (void)setTimescale:(NSTimeInterval)timescale {
-    safe_dispatch_sync(self.internalQueue, ^{
+    dispatch_async(self.internalQueue, ^{
         _timescale = timescale;
         [self.pathPoints enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             ((FGUPathPoint *)obj).timeInterval = 1. / timescale;
@@ -187,7 +181,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(FGUFakeLocationPool);
 }
 
 - (void)addLocationToPath:(CLLocation *)location {
-    safe_dispatch_sync(self.internalQueue, ^{
+    dispatch_async(self.internalQueue, ^{
         FGUPathPoint *newPoint = [[FGUPathPoint alloc] initWithLocation:location];
         
         if (self.currentSimulationMode == FGULocationManagerSimModeSinglePointFromTouch) {
@@ -219,20 +213,28 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(FGUFakeLocationPool);
 }
 
 - (void)moveToNextLocation {
-    safe_dispatch_sync(self.internalQueue, ^{
+    dispatch_async(self.internalQueue, ^{
         if ([self.pathPoints count] == 0) {
+            [self stopLocationSimulation];
             return;
         }
         
-        if (self.currentSegmentIndex == NSNotFound) {
+        if (self.currentSegmentIndex == TUNoSelectedSegmentIndex) {
             self.currentSegmentIndex = 0;
         }
         
+        if (self.paused == YES) {
+          return;
+        }
+
         FGUPathPoint *endPoint = self.pathPoints[self.currentSegmentIndex];
         [self setSimulatedLocationToLocation:endPoint fromLocation:self.lastPathPoint];
         
         if (endPoint.timeInterval > 0.) {
-            [self performSelector:_cmd withObject:nil afterDelay:endPoint.timeInterval];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(endPoint.timeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+              [self moveToNextLocation];
+            });
+
         }
         
         self.lastPathPoint = endPoint;
@@ -268,7 +270,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(FGUFakeLocationPool);
 
 - (void)stopLocationSimulation {
     [self pauseLocationSimulation];
-    self.currentSegmentIndex = NSNotFound;
+    self.currentSegmentIndex = TUNoSelectedSegmentIndex;
 }
 
 - (void)resumeLocationSimulation {
@@ -282,7 +284,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(FGUFakeLocationPool);
 }
 
 - (void)startLocationSimulation {
-    self.currentSegmentIndex = NSNotFound;
+    self.currentSegmentIndex = TUNoSelectedSegmentIndex;
     
     [self resumeLocationSimulation];
 }
@@ -292,7 +294,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(FGUFakeLocationPool);
         return nil;
     }
     
-    if (self.currentSegmentIndex == NSNotFound) {
+    if (self.currentSegmentIndex == TUNoSelectedSegmentIndex) {
         return nil;
     }
     
